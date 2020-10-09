@@ -1,0 +1,21 @@
+Illuminate\Database\QueryException  : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gambar' in 'field list' (SQL: insert into `barangs` (`nama_barang`, `gambar`, `harga`, `stok`, `keterangan`, `updated_at`, `created_at`) values (SSD, kopi.jpeg, 5000, 3, xu6NPTJUVsUWkzajow9Lvnfcu52onus46iCAgS5H5KXEeBkIk3, 2020-10-09 08:15:15, 2020-10-09 08:15:15))
+
+  at /home/nwe/Documents/commerce-laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664
+    660|         // If an exception occurs when attempting to run a query, we'll format the error
+    661|         // message to include the bindings with SQL, which will make this exception a
+    662|         // lot more helpful to the developer instead of just the database's errors.
+    663|         catch (Exception $e) {
+  > 664|             throw new QueryException(
+    665|                 $query, $this->prepareBindings($bindings), $e
+    666|             );
+    667|         }
+    668|
+
+  Exception trace:
+
+  1   PDOException::("SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gambar' in 'field list'")
+      /home/nwe/Documents/commerce-laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:452
+
+  2   PDO::prepare()
+      /home/nwe/Documents/commerce-laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:452
+
